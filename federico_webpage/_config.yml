@@ -1,13 +1,26 @@
-title: John Doe # your name (or website title) here
-logo: "/images/logo.png?raw=true" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
-  <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
-  
-remote_theme: pages-themes/minimal@v0.2.0
+# Site settings
+title: Federico Vazzoler | Data Scientist
+logo: /assets/img/profile_picture.jpeg
+description: >-
+  I'm an experienced experimental physicist transitioning into a data science role, with strong expertise in data modeling and analysis.
+  Machine learning (ML) enthusiast, with experience in applying both supervised and unsupervised ML techniques. 
+baseurl: ""
+url: "https://federicovazzoler.github.io"
+github_username: federicovazzoler
+
+# Build settings
+theme: jekyll-theme-minimal
 plugins:
-- jekyll-remote-theme
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+  - jekyll-feed
+
+# Custom configurations
+navigation:
+  - title: Home
+    url: /
+  - title: About Me
+    url: /about
+
+#show_downloads: true
+#google_analytics:
+
+
