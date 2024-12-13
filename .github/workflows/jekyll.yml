@@ -13,11 +13,15 @@ jobs:
         with:
           ruby-version: 3.0
       - name: Install dependencies
-        run: bundle install
+        run: |
+          cd federico_website
+          bundle install
       - name: Build site
-        run: bundle exec jekyll build
+        run: |
+          cd federico_portfolio
+          bundle exec jekyll build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./federico_website/_site
