@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/script.js' | relative_url }}"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="brand">
+          <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+          &#9776;
+        </button>
+        <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙
+        </button>
+        <ul class="nav-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About Me</a></li>
+          <li><a href="{{ '/education/' | relative_url }}">Education</a></li>
+          <li><a href="{{ '/experiences/' | relative_url }}">Professional Experiences</a></li>
+          <li><a href="{{ '/certifications/' | relative_url }}">Certifications</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <aside>
+      <img src="/assets/profile_picture.jpeg" alt="Your Profile Picture">
+      <p><strong>Federico Vazzoler</strong></p>
+      <p><i>Federico is an experimental physicist transitioning into data science, with strong expertise in data modeling and analysis.</p>
+      <p>A passionate ML and AI enthusiast, he believes in the untapped potential of data to reveal the future.</i></p>
+      <p>Email: <a href="mailto:vazzoler.federico@gmail.com">vazzoler.federico@gmail.com</a></p> 
+      <p>GitHub: <a href="https://github.com/federicovazzoler">federicovazzoler</a></p>
+    </aside>
+    <main>
+      {{ content }}
+    </main>
+  </div>
+  <footer>
+    &copy; {{ site.time | date: "%Y" }} Federico Vazzoler. All rights reserved.
+  </footer>
+</body>
+</html>
