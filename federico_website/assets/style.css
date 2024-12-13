@@ -3,14 +3,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+/*  background-color: rgb(156, 75, 75);*/
+  background: linear-gradient(to right, rgb(87, 87, 255), rgb(130, 255, 130));
   color: #333;
 }
 
 /* Navbar styles */
 nav {
-  background-color: #333;
-  color: white;
+  background-color: #ffffffc1;
+  color: black;
 }
 
 .nav-container {
@@ -28,7 +29,7 @@ nav {
 }
 
 .brand a {
-  color: white;
+  color: black;
   font-size: 1.5em;
   text-decoration: none;
 }
@@ -45,13 +46,13 @@ nav {
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-links a:hover {
-  color: #31649a;
+  color: rgb(173, 173, 255);
 }
 
 /* Hamburger button */
@@ -104,17 +105,17 @@ nav {
 aside {
   flex: 1;
   max-width: 300px;
-  padding: 20px;
-  background-color: #fff;
+  padding: 25px;
+  background-color: #ffffffc1;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 aside img {
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   margin-bottom: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -123,7 +124,7 @@ aside img {
 main {
   flex: 3;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffffc1;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   min-width: 300px;
@@ -133,19 +134,28 @@ footer {
   text-align: center;
   margin: 20px 0;
   font-size: 12px;
-  color: #aaa;
+  color: #ffffff;
 }
 
 /* Dark mode styles */
+/* Dark mode background */
+body.dark {
+  background: linear-gradient(to right, rgb(33, 33, 99), rgb(56, 133, 56));
+}
+
 /* Dark mode body */
 body.dark {
-  background-color: #373737; /* Dark background */
+  background-color: #333333c1; /* Dark background */
   color: #ffffff; /* Light text */
 }
 
 /* Dark mode navbar */
 body.dark nav {
-  background-color: #292929; /* Darker navbar */
+  background-color: #333333c1; /* Darker navbar */
+}
+
+body.dark .brand a{
+  color: #ffffff; /* Light text for navbar links */
 }
 
 body.dark .nav-links a {
@@ -158,19 +168,19 @@ body.dark .nav-links a:hover {
 
 /* Dark mode aside */
 body.dark aside {
-  background-color: #2b2b2b;
+  background-color: #333333c1;
   color: #e0e0e0;
 }
 
 /* Dark mode main content */
 body.dark main {
-  background-color: #2b2b2b;
+  background-color: #333333c1;
   color: #e0e0e0;
 }
 
 /* Dark mode selection text */
 body.dark ::selection {
-  background-color: #ffffff; /* Soft blue selection */
+  background-color: rgb(173, 173, 255); /* Soft blue selection */
   color: #121212;
 }
 
@@ -191,7 +201,14 @@ body.dark ::selection {
 }
 
 /* Sun and moon icons */
-.sun-icon, .moon-icon {
+.sun-icon {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute; /* Absolute positioning to keep them in the center */
+  transition: opacity 0.3s ease; /* Only opacity transition */
+}
+
+.moon-icon {
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
   position: absolute; /* Absolute positioning to keep them in the center */
