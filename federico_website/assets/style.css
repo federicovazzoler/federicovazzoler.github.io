@@ -10,6 +10,19 @@ body {
   color: #333;
 }
 
+/**
+ * Links
+ */
+ a {
+  color: rgb(87, 79, 197);
+  text-decoration: none;
+}
+
+body.dark a {
+  color: rgb(235, 168, 179);
+  text-decoration: none;
+}
+
 /* Navbar styles */
 nav {
   background-color: #ffffffc1;
