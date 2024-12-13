@@ -1,0 +1,269 @@
+/* General styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+/*  background-color: rgb(156, 75, 75);*/
+/*  background: linear-gradient(to right, rgb(87, 87, 255), rgb(130, 255, 130));*/
+/*  background: linear-gradient(to right, rgb(242, 179, 183), rgb(73, 64, 197)); */
+  background: radial-gradient(circle, rgb(242, 179, 183), rgb(73, 64, 197));
+  color: #333;
+}
+
+/**
+ * Links
+ */
+ a {
+  color: rgb(87, 79, 197);
+  text-decoration: none;
+}
+
+body.dark a {
+  color: rgb(235, 168, 179);
+  text-decoration: none;
+}
+
+/* Navbar styles */
+nav {
+  background-color: #ffffffc1;
+  color: black;
+  border-radius: 10px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Add this to help with absolute positioning */
+}
+
+.nav-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Creates a small fixed space between elements */
+}
+
+.brand a {
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: rgb(173, 173, 255);
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: black;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-container {
+    position: relative; /* Ensure proper positioning */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffffe8;
+    position: absolute;
+    top: 100%; /* Position right below the navbar */
+    right: 0%; /* Align to the right side */
+    /*width: 100%; /* Full width of the container */
+    min-width: none;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+
+  .nav-links.show {
+    display: inline-flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  body.dark .nav-links {
+    background-color: #333333e8;
+  }  
+}
+
+/* Layout styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+aside {
+  flex: 1;
+  max-width: 300px;
+  padding: 25px;
+  background-color: #ffffffc1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 0px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+aside img {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  flex: 3;
+  padding: 20px;
+  background-color: #ffffffc1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* Dark mode styles */
+/* Dark mode background */
+body.dark {
+/*  background: linear-gradient(to right, rgb(33, 33, 99), rgb(56, 133, 56));*/
+  /*background: linear-gradient(to right, rgb(122, 75, 83), rgb(46, 41, 130)); */
+  background: radial-gradient(circle, rgb(122, 75, 83), rgb(46, 41, 130));
+}
+
+/* Dark mode body */
+body.dark {
+  background-color: #333333c1; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+/* Dark mode navbar */
+body.dark nav {
+  background-color: #333333c1; /* Darker navbar */
+}
+
+body.dark .brand a{
+  color: #ffffff; /* Light text for navbar links */
+}
+
+body.dark .nav-links a {
+  color: #ffffff; /* Light text for navbar links */
+}
+
+body.dark .nav-links a:hover {
+  color: #ffffff; /* Light hover color */
+}
+
+/* Dark mode aside */
+body.dark aside {
+  background-color: #333333c1;
+  color: #e0e0e0;
+}
+
+/* Dark mode main content */
+body.dark main {
+  background-color: #333333c1;
+  color: #e0e0e0;
+}
+
+/* Dark mode selection text */
+body.dark ::selection {
+  background-color: rgb(173, 173, 255); /* Soft blue selection */
+  color: #121212;
+}
+
+/* Hamburgher button in dark mode */
+body.dark .hamburger {
+  color: white;
+}
+
+/* Dark mode toggle styles */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;  /* Remove padding */
+  background-color: transparent;  /* Use transparent explicitly */
+  border-radius: 0;  /* Remove border radius */
+  cursor: pointer;
+  user-select: none;
+  width: auto;  /* Let content determine width */
+  height: auto;  /* Let content determine height */
+  transition: none;  /* Remove unnecessary transition */
+  position: relative;
+}
+
+/* Sun and moon icons */
+.sun-icon {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute; /* Absolute positioning to keep them in the center */
+  transition: opacity 0.3s ease; /* Only opacity transition */
+}
+
+.moon-icon {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  position: absolute; /* Absolute positioning to keep them in the center */
+  transition: opacity 0.3s ease; /* Only opacity transition */
+}
+
+.moon-icon {
+  opacity: 0; /* Hide the moon by default */
+}
+
+body.dark .sun-icon {
+  opacity: 0; /* Hide the sun in dark mode */
+}
+
+body.dark .moon-icon {
+  opacity: 1; /* Show the moon in dark mode */
+}
+
+/* Hover effect on the toggle button */
+.toggle:hover {
+  background-color: transparent; /* No background on hover */
+}
