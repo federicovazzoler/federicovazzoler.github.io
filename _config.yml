@@ -4,7 +4,7 @@ email: vazzoler.federico@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   I'm an experienced experimental physicist transitioning into a data science role, with strong expertise in data modeling and analysis.
   Machine learning (ML) enthusiast, with experience in applying both supervised and unsupervised ML techniques. 
-baseurl: "/federico_website" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://federicovazzoler.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  federicovazzoler
