@@ -14,7 +14,7 @@ jobs:
           ruby-version: 3.0
       - name: Install dependencies
         run: |
-          cd federico_webpage
+          cd federico_website
           bundle install
       - name: Build site
         run: |
@@ -24,4 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./federico_webpage/_site
+          publish_dir: ./federico_website/_site
