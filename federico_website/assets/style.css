@@ -18,6 +18,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  position: relative; /* Add this to help with absolute positioning */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Creates a small fixed space between elements */
 }
 
 .brand a {
@@ -44,7 +51,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #67de12;
+  color: #31649a;
 }
 
 /* Hamburger button */
@@ -59,16 +66,22 @@ nav {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .nav-container {
+    position: relative; /* Ensure proper positioning */
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: #333;
     position: absolute;
-    top: 50px;
-    right: 20px;
+    top: 100%; /* Position right below the navbar */
+    right: 0; /* Align to the right side */
+    width: 100%; /* Full width of the container */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it's above other elements */
   }
 
   .nav-links.show {
@@ -124,34 +137,80 @@ footer {
 }
 
 /* Dark mode styles */
+/* Dark mode body */
 body.dark {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light text */
+  background-color: #373737; /* Dark background */
+  color: #ffffff; /* Light text */
 }
 
+/* Dark mode navbar */
 body.dark nav {
-  background-color: #1f1f1f; /* Darker navbar */
+  background-color: #292929; /* Darker navbar */
 }
 
 body.dark .nav-links a {
-  color: #b3c7ff; /* Softer link color in dark mode */
+  color: #ffffff; /* Light text for navbar links */
 }
 
 body.dark .nav-links a:hover {
-  color: #8aaaff; /* Lighter hover effect */
+  color: #ffffff; /* Light hover color */
 }
 
+/* Dark mode aside */
 body.dark aside {
-  background-color: #1f1f1f; /* Dark sidebar */
-  color: #e0e0e0; /* Light text */
+  background-color: #2b2b2b;
+  color: #e0e0e0;
 }
 
+/* Dark mode main content */
 body.dark main {
-  background-color: #1f1f1f; /* Dark main content */
-  color: #e0e0e0; /* Light text */
+  background-color: #2b2b2b;
+  color: #e0e0e0;
 }
 
+/* Dark mode selection text */
 body.dark ::selection {
-  background-color: #8aaaff; /* Soft blue selection */
-  color: #121212; /* Dark text in selection */
+  background-color: #ffffff; /* Soft blue selection */
+  color: #121212;
+}
+
+/* Dark mode toggle styles */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;  /* Remove padding */
+  background-color: transparent;  /* Use transparent explicitly */
+  border-radius: 0;  /* Remove border radius */
+  cursor: pointer;
+  user-select: none;
+  width: auto;  /* Let content determine width */
+  height: auto;  /* Let content determine height */
+  transition: none;  /* Remove unnecessary transition */
+  position: relative;
+}
+
+/* Sun and moon icons */
+.sun-icon, .moon-icon {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  position: absolute; /* Absolute positioning to keep them in the center */
+  transition: opacity 0.3s ease; /* Only opacity transition */
+}
+
+.moon-icon {
+  opacity: 0; /* Hide the moon by default */
+}
+
+body.dark .sun-icon {
+  opacity: 0; /* Hide the sun in dark mode */
+}
+
+body.dark .moon-icon {
+  opacity: 1; /* Show the moon in dark mode */
+}
+
+/* Hover effect on the toggle button */
+.toggle:hover {
+  background-color: transparent; /* No background on hover */
 }
