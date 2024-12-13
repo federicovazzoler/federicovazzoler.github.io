@@ -4,7 +4,9 @@ body {
   margin: 0;
   padding: 0;
 /*  background-color: rgb(156, 75, 75);*/
-  background: linear-gradient(to right, rgb(87, 87, 255), rgb(130, 255, 130));
+/*  background: linear-gradient(to right, rgb(87, 87, 255), rgb(130, 255, 130));*/
+/*  background: linear-gradient(to right, rgb(242, 179, 183), rgb(73, 64, 197)); */
+  background: radial-gradient(circle, rgb(242, 179, 183), rgb(73, 64, 197));
   color: #333;
 }
 
@@ -12,6 +14,11 @@ body {
 nav {
   background-color: #ffffffc1;
   color: black;
+  border-radius: 10px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .nav-container {
@@ -23,7 +30,7 @@ nav {
 }
 
 .nav-right {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px; /* Creates a small fixed space between elements */
 }
@@ -36,7 +43,7 @@ nav {
 
 .nav-links {
   list-style: none;
-  display: flex;
+  display: inline-flex;
   margin: 0;
   padding: 0;
 }
@@ -61,7 +68,7 @@ nav {
   background: none;
   border: none;
   font-size: 1.5em;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -74,7 +81,7 @@ nav {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #333;
+    background-color: #ffffffe8;
     position: absolute;
     top: 100%; /* Position right below the navbar */
     right: 0; /* Align to the right side */
@@ -92,6 +99,10 @@ nav {
   .hamburger {
     display: block;
   }
+
+  body.dark .nav-links {
+    background-color: #333333e8;
+  }  
 }
 
 /* Layout styles */
@@ -111,6 +122,8 @@ aside {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-bottom: 0px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 aside img {
@@ -128,6 +141,8 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   min-width: 300px;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 footer {
@@ -140,7 +155,9 @@ footer {
 /* Dark mode styles */
 /* Dark mode background */
 body.dark {
-  background: linear-gradient(to right, rgb(33, 33, 99), rgb(56, 133, 56));
+/*  background: linear-gradient(to right, rgb(33, 33, 99), rgb(56, 133, 56));*/
+  /*background: linear-gradient(to right, rgb(122, 75, 83), rgb(46, 41, 130)); */
+  background: radial-gradient(circle, rgb(122, 75, 83), rgb(46, 41, 130));
 }
 
 /* Dark mode body */
@@ -182,6 +199,11 @@ body.dark main {
 body.dark ::selection {
   background-color: rgb(173, 173, 255); /* Soft blue selection */
   color: #121212;
+}
+
+/* Hamburgher button in dark mode */
+body.dark .hamburger {
+  color: white;
 }
 
 /* Dark mode toggle styles */
