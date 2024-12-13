@@ -44,7 +44,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #67de12;
+  color: #31649a;
 }
 
 /* Hamburger button */
@@ -125,33 +125,33 @@ footer {
 
 /* Dark mode styles */
 body.dark {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0; /* Light text */
+  background-color: #373737; /* Dark background */
+  color: #ffffff; /* Light text */
 }
 
 body.dark nav {
-  background-color: #1f1f1f; /* Darker navbar */
+  background-color: #292929; /* Darker navbar */
 }
 
 body.dark .nav-links a {
-  color: #b3c7ff; /* Softer link color in dark mode */
+  color: #ffffff; /* Softer link color in dark mode */
 }
 
 body.dark .nav-links a:hover {
-  color: #8aaaff; /* Lighter hover effect */
+  color: #ffffff; /* Lighter hover effect */
 }
 
 body.dark aside {
-  background-color: #1f1f1f; /* Dark sidebar */
+  background-color: #2b2b2b; /* Dark sidebar */
   color: #e0e0e0; /* Light text */
 }
 
 body.dark main {
-  background-color: #1f1f1f; /* Dark main content */
+  background-color: #2b2b2b; /* Dark main content */
   color: #e0e0e0; /* Light text */
 }
 
 body.dark ::selection {
-  background-color: #8aaaff; /* Soft blue selection */
+  background-color: #ffffff; /* Soft blue selection */
   color: #121212; /* Dark text in selection */
 }
