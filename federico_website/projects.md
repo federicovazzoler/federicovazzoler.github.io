@@ -1,29 +1,69 @@
 ---
 layout: page 
-title: Projects
+title: Personal Projects
 permalink: /projects/
 ---
 
-### Project 1
+### Efficient Classification of Solar Variability 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus est orci, ac blandit ligula eleifend eu. Nam sem ligula, accumsan vitae est a, blandit interdum leo. Curabitur sit amet turpis in neque dapibus congue eu at odio. In nec venenatis nunc, quis tincidunt diam. In ligula nunc, faucibus non enim vel, consequat convallis eros. Suspendisse potenti. Etiam tempus tincidunt massa, eget accumsan risus mollis eget. Quisque urna arcu, accumsan vitae interdum ac, malesuada a odio. Quisque in lobortis eros. Quisque sit amet vestibulum risus. Nunc a tortor quis ante gravida sagittis in eget ligula.
+*Nov. 2024 – Dec. 2024*
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sed risus leo. Etiam vehicula consequat arcu vel porta. Proin vitae mauris lobortis, congue sapien in, pellentesque turpis. Aliquam et maximus velit. Donec at bibendum enim. Ut eleifend ac purus ut fermentum. Mauris a mollis diam, eu ullamcorper risus. Maecenas sed dui consectetur eros efficitur consequat eget eu ante. Nunc quis mauris nec turpis fringilla tincidunt. Sed sed metus vel massa finibus porta a non mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non nisi lectus. Donec elementum odio non lorem ornare fringilla. Fusce nec felis ipsum.
+This project leverages data from the Friuli Venezia Giulia Regional Meteorological Observatory to explore innovative approaches to weather classification. By comparing traditional methods based on solar radiation patterns with modern machine learning (ML) techniques, I demonstrated how ML models can simplify the process by using daily averaged meteorological data instead of detailed hourly measurements.
 
-Morbi et ipsum nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus scelerisque, nisi a tempor suscipit, felis neque volutpat sapien, quis tincidunt urna justo vel erat. Sed erat neque, mollis nec porttitor vitae, lobortis ac eros. Ut a bibendum eros. Praesent tincidunt nulla eros, sed dictum urna ullamcorper sit amet. Donec pulvinar velit lectus, ac mollis nibh finibus vel. Morbi et massa blandit justo mattis ornare non in erat. Aliquam non finibus quam. Fusce eget rhoncus turpis.
+The Support Vector Classifier (SVC) stood out for its ability to accurately distinguish clear and cloudy days. However, all methods faced challenges in identifying intermediate weather types, highlighting opportunities for improvement in feature design.
 
-Cras a ante nec magna aliquet aliquet. Donec facilisis tincidunt libero eget interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed elementum elementum felis, sed sollicitudin justo tempor nec. Etiam et nulla vehicula, ultrices ex id, suscipit urna. In hac habitasse platea dictumst. Aliquam erat volutpat. Mauris ante quam, placerat et placerat ut, faucibus sit amet erat. Vivamus vitae scelerisque tellus, sit amet vulputate enim. Praesent ultrices erat lectus, non auctor tortor malesuada sit amet. Pellentesque vulputate ac nibh sed facilisis.
+This work showcases the potential of ML to make weather classification more efficient and scalable, while providing valuable insights into improving traditional approaches.
 
-![Theoretical solar radiation vs hour in Capriva del Friuli 2012](solar_variability/img/theoretical_solar_radiation_vs_hour_capriva_del_friuli_2012.png){: width="500"}
+<div style="text-align: center; margin-top: 10px;">
+    <figure>
+        <img src="solar_variability/img/cloudy_2012_5_6.png" alt="Cloudy day in Capriva del Friuli" width="400">
+        <figcaption><i>Example of a day categorised in the project. The black solid line represent the measured solar radiation while the grey one the predicted one (I used the ineichen model).</i></figcaption>
+    </figure>  
+</div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus est orci, ac blandit ligula eleifend eu. Nam sem ligula, accumsan vitae est a, blandit interdum leo. Curabitur sit amet turpis in neque dapibus congue eu at odio. In nec venenatis nunc, quis tincidunt diam. In ligula nunc, faucibus non enim vel, consequat convallis eros. Suspendisse potenti. Etiam tempus tincidunt massa, eget accumsan risus mollis eget. Quisque urna arcu, accumsan vitae interdum ac, malesuada a odio. Quisque in lobortis eros. Quisque sit amet vestibulum risus. Nunc a tortor quis ante gravida sagittis in eget ligula.
+**Objective:** Developed a machine learning framework for day-type classification using meteorological data from the Friuli Venezia Giulia Regional Meteorological Observatory.
 
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sed risus leo. Etiam vehicula consequat arcu vel porta. Proin vitae mauris lobortis, congue sapien in, pellentesque turpis. Aliquam et maximus velit. Donec at bibendum enim. Ut eleifend ac purus ut fermentum. Mauris a mollis diam, eu ullamcorper risus. Maecenas sed dui consectetur eros efficitur consequat eget eu ante. Nunc quis mauris nec turpis fringilla tincidunt. Sed sed metus vel massa finibus porta a non mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non nisi lectus. Donec elementum odio non lorem ornare fringilla. Fusce nec felis ipsum.
+**Techniques:** Employed supervised learning methods (Support Vector Classifier, Random Forest, K-Nearest Neighbors) and compared them to traditional clustering approaches based on binormalized daily solar radiation patterns.
 
-Morbi et ipsum nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus scelerisque, nisi a tempor suscipit, felis neque volutpat sapien, quis tincidunt urna justo vel erat. Sed erat neque, mollis nec porttitor vitae, lobortis ac eros. Ut a bibendum eros. Praesent tincidunt nulla eros, sed dictum urna ullamcorper sit amet. Donec pulvinar velit lectus, ac mollis nibh finibus vel. Morbi et massa blandit justo mattis ornare non in erat. Aliquam non finibus quam. Fusce eget rhoncus turpis.
+**Tools:** Python, Scikit-learn, Pandas, Matplotlib, SHAP.
 
-Cras a ante nec magna aliquet aliquet. Donec facilisis tincidunt libero eget interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed elementum elementum felis, sed sollicitudin justo tempor nec. Etiam et nulla vehicula, ultrices ex id, suscipit urna. In hac habitasse platea dictumst. Aliquam erat volutpat. Mauris ante quam, placerat et placerat ut, faucibus sit amet erat. Vivamus vitae scelerisque tellus, sit amet vulputate enim. Praesent ultrices erat lectus, non auctor tortor malesuada sit amet. Pellentesque vulputate ac nibh sed facilisis.
+**Outcome:** Demonstrated that the Support Vector Classifier achieved the highest accuracy in distinguishing clear and cloudy days, while uncovering limitations in traditional methods for identifying intermediate day types (quasi-clear).
 
-Vivamus et leo facilisis, sollicitudin dui quis, venenatis leo. Quisque convallis nisl eget lectus laoreet, id tempor felis euismod. Phasellus eget sapien mattis, viverra erat vitae, maximus elit. Phasellus a velit sodales, egestas libero tempor, consectetur elit. Donec interdum metus lorem, in placerat nunc efficitur vel. Pellentesque sed nisl in lorem ultrices porta vel vitae ligula. Pellentesque ligula ante, eleifend sodales dui quis, euismod elementum leo.
+**Full Report:** The full report can be found [here](solar_variability/OSMER_data_classification.pdf).
 
-### Project 2
+---
+
+<br/><br/>
+
+### Stocks price forecasting investigation 
+
+*Nov. 2024 - ongoing*
+
+This project explores the potential of various forecasting models to predict stock prices, focusing on time series analysis and machine learning techniques.
+
+Currently, I am implementing the Facebook Prophet algorithm to forecast ETF closing prices using data from Yahoo Finance. Prophet is an additive model that captures non-linear trends with built-in support for yearly, weekly, and daily seasonality, as well as holiday effects. It excels in analyzing time series with strong seasonal components and multiple seasons of historical data.
+
+To test the model’s capabilities, I’m focusing on the Bloomberg Coffee Subindex, which is expected to exhibit noticeable seasonal trends due to agricultural cycles. The project is ongoing, and I will share updates and final results as the analysis progresses. Below are some preliminary findings.
+
+<div style="text-align: center; margin-top: 10px;">
+    <figure>
+        <img src="stocks_analyser/forecast.png" alt="Forecast" width="400">
+        <figcaption><i>Forecasting results using the Prophet model. The analysis is based on 1-minute interval data collected over 7 days.</i></figcaption>
+    </figure>  
+</div>
+
+<div style="text-align: center; margin-top: 10px;">
+    <figure>
+        <img src="stocks_analyser/trend.png" alt="Trend" width="400">
+        <figcaption><i>Trend analysis from the Prophet model, using 1-minute interval data collected over a 7-day period.</i></figcaption>
+    </figure>  
+</div>
+
+<div style="text-align: center; margin-top: 10px;">
+    <figure>
+        <img src="stocks_analyser/backtest.png" alt="Backtest" width="400">
+        <figcaption><i>Backtesting results using the Prophet model. Only the input data (blue points) are provided to the model. The predicted values (green line) are then compared with observed close prices (orange points).</i></figcaption>
+    </figure>  
+</div>
+
+---

@@ -3,11 +3,13 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: Federico Vazzoler | PhD and Data Scientist
+title: Federico's space
 ---
 
 Welcome to my personal webpage!
 
-Here you can find some info [about me]({% link about.md %}) and my [educational]({% link education.md %}) and [career]({% link experiences.md %}) paths.
+Here you can find some info [about me]({% link about.md %}), my [educational]({% link education.md %}), and [career]({% link experiences.md %}) path.
 
-I'm also working on some cool projects, you can find them [here]({% link projects.md %})
+I'm also working on some cool personal projects, you can find them [here]({% link projects.md %})
+
+Feel free to contact me!
