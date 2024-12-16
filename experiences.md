@@ -19,7 +19,7 @@ permalink: /experiences/
 *European Organization for Nuclear Research (CERN), Geneva, Switzerland (Jan. 2020 – Dec. 2020)*
 
 - Contributed to high-impact data analysis projects for the [CMS experiment at CERN LHC](https://www.home.cern/science/experiments/cms).
-- Managed MonteCarlo simulation production infrastructure for experimental studies, ensuring critical data availability.
+- Managed Monte Carlo simulation production infrastructure for experimental studies, ensuring critical data availability.
 
 ---
 
