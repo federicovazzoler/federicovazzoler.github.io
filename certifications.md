@@ -4,6 +4,18 @@ title: Certifications
 permalink: /certifications/
 ---
 
+### Databases and SQL for Data Science with Python
+
+**Issuer**: IBM
+
+**Date**: Feb. 2025
+
+**Certificate ID**: [1cedaa3f3c84c97437a0371db86a4fd0](https://coursera.org/share/1cedaa3f3c84c97437a0371db86a4fd0)
+
+**Technical Skills**: SQL, Relational Database Managment System (RDBMS), Cloud Databases
+
+---
+
 ### Supervised Machine Learning: Classification
 
 **Issuer**: IBM
